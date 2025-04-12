@@ -5,9 +5,8 @@
 }
 
 body {
-    background: black url(imagens/fofinhos.png) center repeat scroll;
+    background: black url(imagens/fofinhos.png) center repeat fixed;
     background-size: 100% 100% cover;
-    back
     height: 100vh;
 
     }
@@ -17,7 +16,7 @@ body {
         max-width: 274px;
         padding: 10px;
         margin: auto;
-        border: 1px solid black;
+        border: 1px solid ;
         border-radius: 15px;
         }
 
