@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+}
+
+body {
+    background: black url(imagens/fofinhos.png) center repeat fixed;
+    background-size: 100% 100% cover;
+    height: 100vh;
+
+    }
+
+    main {
+        background-color: white;
+        max-width: 274px;
+        padding: 10px;
+        margin: auto;
+        border: 1px solid ;
+        border-radius: 15px;
+        }
+
+        main > h1 {
+            text-align: center;
+        }

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Exemplo da maioria de formulários</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+
+        <fieldset>
+            <legend>Seus dados</legend>
+            <p>
+                <label for="inome">Seu nome é:</label>
+                <input type="text" name="nome" id="inome" minlength="0" maxlength="60" required placeholder="Seu nome">
+            </p>
+            <p>
+                <label for="iidade">Sua idade é:</label>
+                <input type="number" name="idade" id="iidade" min="0" max="99" required placeholder="Sua idade">
+            </p>
+            <p>
+                <label for="imail">Seu e-mail: </label>
+                <input type="email" name="email" id="imail" required placeholder="Seu e-mail aqui">
+            </p>
+            <p>
+                <label for="isenha">Sua senha: </label>
+                <input type="password" name="senha" id="isenha" required placeholder="Sua senha aqui">
+            </p>
+            <p>
+                <label for="imes">Ano e Mês que começou a estudar:</label>
+                <input type="month" name="mes" id="imes" value="2025-04">
+            </p>
+            <p>
+                <label for="idata">Dia e Mês do nascimento:</label>
+                <input type="date" name="data" id="idata" value="2025-04-23">
+            </p>
+            <p>
+                <label for="ihora">Qual horário?</label>
+                <input type="time" name="hora" id="ihora" value="00:00">
+            </p>
+            <p>
+                <label for="itel">Seu telefone:</label>
+                <input type="tel" name="telefone" id="itel" pattern="^[0-9]{4}-[0-9]{4}$" placeholder="####-####" required>
+            </p>
+            <p>
+                <label for="ifoto">Seu arquivo</label>
+                <input type="file" name="foto" id="ifoto">
+            </p>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Seus gostos</legend>
+            <p>
+                <input type="checkbox" name="fut" id="ifut"> <label for="ifut">Futebol</label>
+                <input type="checkbox" name="bas" id="ibas"> <label for="ibas">Basquete</label>
+                <input type="checkbox" name="nat" id="inat"> <label for="inat">Natação</label>
+            </p>
+            <p>
+                <input type="radio" name="sexo" id="imasc"> <label for="imasc">Masculino</label>
+                <input type="radio" name="sexo" id="ifem"> <label for="ifem">Feminino</label>
+            </p>
+            <p>
+                <label for="icor">Cores</label>
+                <input type="color" name="cor" id="icor" value="#00ff00">
+            </p>
+            <p>
+                <label for="isats">Nível de satisfação:</label>
+                <input type="range" name="satis" id="isats" min="0" max="10" value="5">
+            </p>
+            <p>
+                <select name="jogad" id="ijog">
+                    <option value="" selected>-- ESCOLHA --</option>
+            
+                        <optgroup label="Jogadores do Corinthians">
+                            <option value="YA">Yuri Alberto</option>
+                            <option value="MD">Memphis Depay</option>
+                            <option value="RG">Rodrigo Garro</option>
+                            <option value="KF">Kayke Ferrari</option>
+                            <option value="HS">Hugo Souza</option>
+                        </optgroup>
+                </select>
+            </p>
+            <p>
+                <label for="iposi">Posição: </label>
+                <input type="text" name="posi" id="ipos" list="iposi">
+                <datalist id="iposi">
+                    <option value="YA">Atacante</option>
+                    <option value="RG">Meio-Campo</option>
+                    <option value="HS">Goleiro</option>
+                    <option value="MA">Lateral</option>
+                </datalist>
+            </p>
+            <p>
+                <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+            </p>
+            <p>
+                <label for="in1">Número 1:</label>
+                <input type="number" name="n1" id="in1" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+            </p>
+            <p>
+                <label for="in2">Número 2:</label>
+                <input type="number" name="n2" id="in2" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+            </p>
+            <p>
+                <label for="isoma">Soma:</label>
+                <output name="soma" id="isoma">0</output>
+            </p>
+            <p>
+                <label for="inum">Número: </label>
+                <input type="range" name="num" id="inum" min="0" max="10" value="5" oninput="ival.innerHTML = Number(inum.value)">
+                <output id="ival">5</output>
+            </p>
+        </fieldset>
+
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>    
+</body>
+</html>
